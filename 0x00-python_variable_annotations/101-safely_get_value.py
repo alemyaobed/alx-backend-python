@@ -2,14 +2,6 @@
 '''
 Given the parameters and the return values, add type
 annotations to the function
-
-Hint: look into TypeVar
-
-def safely_get_value(dct, key, default = None):
-    if key in dct:
-        return dct[key]
-    else:
-        return default
 '''
 from typing import Any, Mapping, TypeVar, Union
 
@@ -20,7 +12,7 @@ def safely_get_value(
         dct: Mapping[Any, Any],
         key: Any, default: Union[T, None] = None
         ) -> Union[Any, T]:
-    """Gets a value from a dictionary safely."""
+    ''' Annotated function'''
     if key in dct:
         return dct[key]
     else:
