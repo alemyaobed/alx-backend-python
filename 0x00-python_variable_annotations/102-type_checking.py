@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-'''
-Use mypy to validate the following piece of code and
-apply any necessary changes.
+"""
+Use mypy to validate the following piece of code and apply any
+necessary changes.
+"""
 
-'''
-from typing import Tuple, List
+from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> Tuple[int, ...]:
-    ''' Annotated function'''
-    zoomed_in: List[int] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """ returns a list """
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
-    return tuple(zoomed_in)
+    return zoomed_in
 
 
-array = (12, 72, 91)
+array = tuple([12, 72, 91])
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3)
+zoom_3x = zoom_array(array, int(3.0))
